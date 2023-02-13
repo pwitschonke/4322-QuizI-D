@@ -27,9 +27,10 @@ for line in reader:
     if line[4] == "CSR":
         
         fullName = line[1] + " " + line[2]
+        salary = float(line[5])
         newSalary = float(line[5]) * 1.10
 
-        print(f"Manager Name: {fullName} Current Salary: ${float(line[5]):,.2f}")
+        print(f"Manager Name: {fullName} Current Salary: ${salary:,.2f}")
 
         employeeDict[fullName] = newSalary
 
