@@ -24,7 +24,7 @@ next(reader)
 for line in reader:
 
     #check if the employee fits the search criteria
-    if line[4] == "CSR":
+    if line[3] == "Marketing" and line[4] == "CSR":
         
         fullName = line[1] + " " + line[2]
         salary = float(line[5])
