@@ -26,11 +26,12 @@ for line in reader:
     #check if the employee fits the search criteria
     if line[4] == "CSR":
         
-        fullName = line[1] + " " + line[2] 
+        fullName = line[1] + " " + line[2]
+        newSalary = float(line[5]) * 1.10
 
         print(f"Manager Name: {fullName} Current Salary: ${float(line[5]):,.2f}")
 
-        employeeDict[line[1] + " " + line[2]] = float(line[5]) * 1.10
+        employeeDict[fullName] = newSalary
 
 print()
 print('=========================================')
